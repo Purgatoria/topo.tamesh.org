@@ -16,6 +16,13 @@ svg {
  text-anchor: middle;
  dominant-baseline: middle;
 }
+@keyframes node-blink {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0.05; }
+}
+.node-selected circle {
+ animation: node-blink 0.4s ease-in-out 6;
+}
 .link.full-bidirectional {
  stroke: #555;
 }

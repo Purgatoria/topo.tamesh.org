@@ -479,6 +479,12 @@
          animationManager.startNodeTransmission(d3.select(`[data-id="${node.id}"]`).node(), node, selectedMesh, highlightNodeAndLinks, unhighlightNodeAndLinks);
 
          showTooltip(node);
+
+         setTimeout(() => {
+          const selectedNodeEl = d3.select(`[data-id="${node.id}"]`);
+          selectedNodeEl.classed("node-selected", true);
+          setTimeout(() => selectedNodeEl.classed("node-selected", false), 2400);
+         }, 0);
         });
 
         resultsDiv.appendChild(resultDiv);
@@ -510,6 +516,12 @@
         animationManager.startNodeTransmission(d3.select(`[data-id="${node.id}"]`).node(), node, selectedMesh, highlightNodeAndLinks, unhighlightNodeAndLinks);
 
         showTooltip(node);
+
+        setTimeout(() => {
+         const selectedNodeEl = d3.select(`[data-id="${node.id}"]`);
+         selectedNodeEl.classed("node-selected", true);
+         setTimeout(() => selectedNodeEl.classed("node-selected", false), 2400);
+        }, 0);
        });
 
        resultsDiv.appendChild(resultDiv);
